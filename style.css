@@ -1,0 +1,133 @@
+
+.header {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    h2 {
+        font-family: 'system-ui';
+        color: black;
+    }
+    background: linear-gradient(to right, rgb(111, 111, 111), rgb(167, 167, 167));
+}
+.logo {
+    text-align: center;
+    width:80px;
+    height:60px;
+}
+.silver {
+    color: silver;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'system-ui';
+    margin-top:20px;
+    background: linear-gradient(to right, black, gray);
+    padding: 30px;
+    border-radius: 10px;
+
+    text-shadow:
+        -2px -2px 0 black,
+         2px -2px 0 black,
+        -2px  2px 0 black,
+         2px  2px 0 black;
+}
+
+.gioithieu {
+    background: linear-gradient(to right, yellow, orange);
+    font-size: 20px;
+    font-family: 'system-ui';
+    border-radius: 10px;
+    text-align: center;
+}
+
+.chuyen {
+    font-family: 'system-ui';
+    text-align: center;
+}
+
+.text {
+    text-align: center;
+    color: silver;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'system-ui';
+    margin-top:20px;
+    border-radius: 10px;
+
+    text-shadow:
+        -2px -2px 0 black,
+         2px -2px 0 black,
+        -2px  2px 0 black,
+         2px  2px 0 black;
+}
+
+.xe {
+    background: rgba(0,0,0,0.2);
+    border-radius: 40px;
+    display: block;
+    text-align: center;
+    p {
+        font-family: 'system-ui';
+    }
+}
+
+.video1 {
+    text-align: center;
+    border-radius: 30px;
+}
+
+img {
+    border-radius: 10px;
+    width: 300px;
+}
+
+.thoisokhai {
+    text-align: center;
+    background: rgba(255, 218, 7, 0.2);
+    border-radius: 30px;
+    p {
+        font-family: 'system-ui';
+    }
+}
+
+.thoimoi {
+    text-align: center;
+    p {
+        font-family: 'system-ui';
+    }
+    background: rgb(7, 201, 255, 0.2)
+}
+
+.hiendai {
+    background: rgba(82, 255, 3, 0.2);
+    text-align: center;
+    p {
+        font-family: 'system-ui';    }
+}
+
+.hientai {
+    text-align: center;
+    background: rgba(0, 140, 255, 0.2);
+    p {
+        font-family: 'system-ui';
+    }
+}
+
+.hino {
+    text-align: center;
+    background: rgba(217, 0, 255, 0.2)
+}
+
+.thongtinweb {
+    text-align: center;
+    background: rgba(255, 0, 0, 0.2);
+    p {
+        font-family: 'system-ui';
+    }
+    a {
+        font-family: 'system-ui';
+        color: black;
+        text-decoration: none;
+    }
+}
