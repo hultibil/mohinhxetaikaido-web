@@ -8,7 +8,7 @@
     h2 {
         font-family: 'system-ui';
         color: black;
-        font-size: 30px;
+        font-size: 50px;
     }
     background: linear-gradient(to right, rgb(111, 111, 111), rgb(167, 167, 167));
 }
@@ -19,7 +19,7 @@
 }
 .silver {
     color: silver;
-    font-size: 30px;
+    font-size: 50px;
     font-weight: bold;
     font-family: 'system-ui';
     margin-top:20px;
@@ -50,7 +50,7 @@
 .text {
     text-align: center;
     color: silver;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
     font-family: 'system-ui';
     margin-top:20px;
@@ -70,7 +70,7 @@
     text-align: center;
     p {
         font-family: 'system-ui';
-        font-size: 20px;
+        font-size: 30px;
     }
 }
 
@@ -90,7 +90,7 @@ img {
     border-radius: 30px;
     p {
         font-family: 'system-ui';
-        font-size: 20px;
+        font-size: 30px;
     }
 }
 
@@ -98,7 +98,7 @@ img {
     text-align: center;
     p {
         font-family: 'system-ui';
-        font-size: 20px;
+        font-size: 30px;
     }
     background: rgb(7, 201, 255, 0.2)
 }
@@ -108,7 +108,7 @@ img {
     text-align: center;
     p {
         font-family: 'system-ui';
-        font-size: 20px;
+        font-size: 30px;
     }
 }
 
@@ -117,7 +117,7 @@ img {
     background: rgba(0, 140, 255, 0.2);
     p {
         font-family: 'system-ui';
-        font-size: 20px;
+        font-size: 30px;
     }
 }
 
@@ -131,11 +131,12 @@ img {
     background: rgba(255, 0, 0, 0.2);
     p {
         font-family: 'system-ui';
-        font-size: 20px;
+        font-size: 30px;
     }
     a {
         font-family: 'system-ui';
         color: black;
         text-decoration: none;
+        font-size: 30px;
     }
 }
