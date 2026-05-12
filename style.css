@@ -140,3 +140,12 @@ img {
         font-size: 30px;
     }
 }
+
+.quatrinhhientai {
+    text-align: center;
+    background: rgba(145, 248, 255, 0.2);
+    p {
+        font-family: 'system-ui';
+        font-size: 30px;
+    }
+}
