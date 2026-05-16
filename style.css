@@ -1,5 +1,5 @@
 body {
-    padding: 100px;
+    padding: 70px;
 }
 .header {
     position: fixed;
@@ -14,7 +14,7 @@ body {
     h2 {
         font-family: 'system-ui';
         color: black;
-        font-size: 30px;
+        font-size: 20px;
     }
     background: linear-gradient(to right, rgb(111, 111, 111), rgb(167, 167, 167));
 }
@@ -39,28 +39,59 @@ body {
         -2px  2px 0 black,
          2px  2px 0 black;
 }
-
+/*Khu vuc thong bao su kien*/
 .sukien {
     text-align: center;
     background: linear-gradient(to right, #00c6ff, #0072ff);
     border-radius: 10px;
-    p {
-        font-family: 'system-ui';
-        font-size: 30px;
+    border: 4px solid black;
+}
+.sukien p {
+    font-family: system-ui;
+    font-size: 30px;
+    color: white;
+    border-radius: 10px;
+}
+.sukien {
+    animation: moDan 1s infinite;
+}
+@keyframes moDan {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
     }
 }
-
+.sukien a{
+    font-family: system-ui;
+    font-size: 30px;
+    color: rgba(217, 255, 0);
+    text-decoration: none;
+}
+/*Khu vuc ket thuc su kien*/
 .gioithieu {
+    text-align: center;
+    background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 255, 0));
+    p {
+    font-family: 'system-ui';
+    font-size: 35px;
+    }
+    a {
     background: linear-gradient(to right, yellow, orange);
-    font-size: 15px;
+    font-size: 25px;
     font-family: 'system-ui';
     border-radius: 10px;
-    text-align: center;
+    }
 }
 
 .chuyen {
     font-family: 'system-ui';
     text-align: center;
+    font-size: 30px;
 }
 
 .text {
@@ -176,10 +207,20 @@ img {
     p {
         font-family: 'system-ui';
         font-size: 30px;
-        background: rgba(0, 0, 0, 0.2)
+        color: white;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.6)
     }
 }
 
-gio {
-    background: rgba(0, 0, 0, 0.2);
+.quaylai {
+    text-align: center;
+    margin-top: 20px;
+    a {
+        font-family: 'system-ui';
+        color: black;
+        text-decoration: none;
+        font-size: 30px;
+    }
+    background: rgba(255, 0, 0, 0.2);
 }
