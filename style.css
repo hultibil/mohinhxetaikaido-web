@@ -1,14 +1,20 @@
-
+body {
+    padding: 100px;
+}
 .header {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 15px;
     display: flex;
     align-items: center;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+    gap: 10px;
     h2 {
         font-family: 'system-ui';
         color: black;
-        font-size: 50px;
+        font-size: 30px;
     }
     background: linear-gradient(to right, rgb(111, 111, 111), rgb(167, 167, 167));
 }
@@ -32,6 +38,16 @@
          2px -2px 0 black,
         -2px  2px 0 black,
          2px  2px 0 black;
+}
+
+.sukien {
+    text-align: center;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    border-radius: 10px;
+    p {
+        font-family: 'system-ui';
+        font-size: 30px;
+    }
 }
 
 .gioithieu {
@@ -152,4 +168,18 @@ img {
         font-family: 'system-ui';
         font-size: 30px;
     }
+}
+
+.xetaiv5 {
+    text-align: center;
+    background: rgba(217, 255, 0, 0.208);
+    p {
+        font-family: 'system-ui';
+        font-size: 30px;
+        background: rgba(0, 0, 0, 0.2)
+    }
+}
+
+gio {
+    background: rgba(0, 0, 0, 0.2);
 }
