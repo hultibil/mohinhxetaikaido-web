@@ -1,5 +1,7 @@
 body {
     padding: 70px;
+    background: #111111;
+    color:white;
 }
 .header {
     position: fixed;
@@ -182,7 +184,7 @@ img {
     }
     a {
         font-family: 'system-ui';
-        color: black;
+        color: white;
         text-decoration: none;
         font-size: 30px;
     }
