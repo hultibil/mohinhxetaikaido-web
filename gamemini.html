@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Game Kaido</title>
+    <link rel="stylesheet" href="GameCss.css">
+    <style>
+        .game {
+
+            width: 100%;
+            height: 400px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        /* Mặt đất */
+
+        .ground {
+
+            width: 100%;
+            height: 100px;
+
+            background: #444;
+
+            position: absolute;
+
+            bottom: 0;
+        }
+
+        /* Nhân vật */
+
+        .player {
+
+            width: 140px;
+            height: 70px;
+            background-position: -40px 0;
+            position: absolute;
+
+            bottom: 100px;
+            left: 100px;
+
+            background-image: url("KaidoGame.png");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Chướng ngại vật */
+
+        .tree {
+
+            width: 30px;
+            height: 140px;
+
+            position: absolute;
+
+            bottom: 100px;
+            right: -100px;
+
+            background-image: url("chuongvat.png");
+
+            background-size: cover;
+            background-position: center;
+
+            animation: chay 2s linear infinite;
+        }
+
+        /* Cây chạy */
+
+        @keyframes chay {
+
+            from {
+                right: -100px;
+            }
+
+            to {
+                right: 100%;
+            }
+        }
+
+        /* Nhảy */
+
+        .jump {
+            animation: jump 0.8s;
+        }
+
+        @keyframes jump {
+
+            0% {
+                bottom: 100px;
+            }
+
+            50% {
+                bottom: 270px;
+            }
+
+            100% {
+                bottom: 100px;
+            }
+        }
+
+        #jumpBtn {
+
+    position: fixed;
+
+    bottom: 30px;
+    right: 30px;
+
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    background: orange;
+    color: white;
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="tittle">GAME KAIDO</div>
+    <div class="tittle" id="score">Điểm: 0</div>
+
+<div class="back">
+    <a href="index.html">Quay lại giới thiệu Kaido.</a>
+</div>
+    <div class="game">
+        <div class="player" id="player"></div>
+        <div class="tree" id="tree"></div>
+        <div class="ground"></div>
+    </div>
+    <button id="jumpBtn">NHẢY</button>
+
+    <script>
+
+        const player = document.getElementById("player");
+        let diem = 0;
+        const score = document.getElementById("score");
+        let daCongDiem = false;
+        let daVuotQua = false;
+
+        /* Nhấn SPACE để nhảy */
+        document.addEventListener("keydown", function(e) {
+            if (e.code === "Space") {
+                if (!player.classList.contains("jump")) {
+                    player.classList.add("jump");
+                    setTimeout(function() {
+                        player.classList.remove("jump");
+                    }, 600);
+                }
+            }
+        });
+
+    /* Va chạm */
+    const tree = document.getElementById("tree");
+    setInterval(function() {
+    let playerBottom =
+    parseInt(
+        window.getComputedStyle(player)
+        .getPropertyValue("bottom")
+    );
+    let treeRight =
+    parseInt(
+        window.getComputedStyle(tree)
+        .getPropertyValue("right")
+    );
+
+    /* Va chạm */
+
+    if (
+        treeRight > window.innerWidth - 220 &&
+        treeRight < window.innerWidth - 100 &&
+        playerBottom < 170
+    ) {
+        alert("Xe tải đã bị hỏng :(((((");
+        location.reload();
+    }
+
+    /* Qua cột => cộng điểm */
+    if (
+        treeRight > 0&&
+        treeRight < window.innerWidth - 220 &&
+        !daCongDiem
+    ) {
+        diem += 350;
+        score.innerHTML = "Điểm: " + diem;
+        daCongDiem = true;
+    }
+
+    /* Reset */
+    if (
+        treeRight > window.innerWidth - 150
+    ) {
+        daCongDiem = false;
+    }
+}, 10);
+jumpBtn.addEventListener("click", nhay);
+
+function nhay() {
+    if (!player.classList.contains("jump")) {
+        player.classList.add("jump");
+        setTimeout(function() {
+            player.classList.remove("jump");
+        }, 600);
+    }
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+body {
+    background: #111827;
+}
+
+.tittle {
+    text-align: center;
+    color: silver;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'system-ui';
+    margin-top:20px;
+    border-radius: 10px;
+
+    text-shadow:
+        -2px -2px 0 black,
+         2px -2px 0 black,
+        -2px  2px 0 black,
+         2px  2px 0 black;
+}
+
+.back {
+    text-align: center;
+    margin-top: 20px;
+    a {
+        font-family: 'system-ui';
+        font-size: 30px;
+        color: white;
+        text-decoration: none;
+        background: linear-gradient(to right, #ff416c, #ff4b2b);
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+}
+
+.back {
+    text-align: center;
+    margin-top: 20px;
+    a {
+        font-family: 'system-ui';
+        font-size: 30px;
+        color: white;
+        text-decoration: none;
+        background: linear-gradient(to right, #ff416c, #ff4b2b);
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+}
+
+.back {
+    animation: moDan 1s infinite;
+}
+@keyframes moDan {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}

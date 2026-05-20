@@ -74,6 +74,35 @@ body {
     color: rgba(217, 255, 0);
     text-decoration: none;
 }
+
+.game {
+    text-align: center;
+    margin-top: 20px;
+    a {
+        font-family: 'system-ui';
+        font-size: 30px;
+        color: white;
+        text-decoration: none;
+        background: linear-gradient(to right, #ff416c, #ff4b2b);
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+}
+
+.game {
+    animation: moDan 1s infinite;
+}
+@keyframes moDan {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 /*Khu vuc ket thuc su kien*/
 .gioithieu {
     text-align: left;
