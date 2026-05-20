@@ -1,3 +1,4 @@
+
 body {
     padding: 80px;
     background: #111827;
@@ -50,7 +51,7 @@ body {
 }
 .sukien p {
     font-family: system-ui;
-    font-size: 30px;
+    font-size: 20px;
     color: white;
     border-radius: 10px;
 }
@@ -70,7 +71,7 @@ body {
 }
 .sukien a{
     font-family: system-ui;
-    font-size: 30px;
+    font-size: 20px;
     color: rgba(217, 255, 0);
     text-decoration: none;
 }
@@ -80,7 +81,7 @@ body {
     margin-top: 20px;
     a {
         font-family: 'system-ui';
-        font-size: 30px;
+        font-size: 20px;
         color: white;
         text-decoration: none;
         background: linear-gradient(to right, #ff416c, #ff4b2b);
@@ -124,13 +125,13 @@ body {
 .chuyen {
     font-family: 'system-ui';
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .text {
     text-align: center;
     color: silver;
-    font-size: 40px;
+    font-size: 25px;
     font-weight: bold;
     font-family: 'system-ui';
     margin-top:20px;
@@ -150,7 +151,7 @@ body {
     text-align: center;
     p {
         font-family: 'system-ui';
-        font-size: 30px;
+        font-size: 20px;
     }
 }
 
@@ -170,7 +171,7 @@ img {
     border-radius: 30px;
     p {
         font-family: 'system-ui';
-        font-size: 30px;
+        font-size: 20px;
     }
 }
 
@@ -178,7 +179,7 @@ img {
     text-align: center;
     p {
         font-family: 'system-ui';
-        font-size: 30px;
+        font-size: 20px;
     }
     background: rgb(7, 201, 255, 0.2);
     border-radius: 20px;
@@ -190,7 +191,7 @@ img {
     border-radius: 20px;
     p {
         font-family: 'system-ui';
-        font-size: 30px;
+        font-size: 20px;
     }
 }
 
@@ -200,7 +201,7 @@ img {
     border-radius: 20px;
     p {
         font-family: 'system-ui';
-        font-size: 30px;
+        font-size: 20px;
     }
 }
 
@@ -216,17 +217,17 @@ img {
     border-radius: 20px;
     p {
         font-family: 'system-ui';
-        font-size: 30px;
+        font-size: 20px;
     }
     a {
         font-family: 'system-ui';
         color: white;
         text-decoration: none;
-        font-size: 30px;
+        font-size: 20px;
     }
     .date {
         font-style: italic;
-        font-size: 30px;
+        font-size: 20px;
     }
 }
 
@@ -236,7 +237,7 @@ img {
     border-radius: 20px;
     p {
         font-family: 'system-ui';
-        font-size: 30px;
+        font-size: 20px;
     }
 }
 
@@ -246,7 +247,7 @@ img {
     border-radius: 20px;
     p {
         font-family: 'system-ui';
-        font-size: 30px;
+        font-size: 20px;
         color: white;
         border-radius: 10px;
     }
@@ -262,7 +263,7 @@ img {
         font-family: 'system-ui';
         color: pink;
         text-decoration: none;
-        font-size: 30px;
+        font-size: 20px;
     }
     background: rgba(255, 0, 0, 0.2);
 }
