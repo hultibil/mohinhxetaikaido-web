@@ -35,6 +35,9 @@ body {
         padding: 10px 20px;
         border-radius: 10px;
     }
+    &:hover a {
+        background: linear-gradient(to right, #000000, #808080);
+    }
 }
 
 .logo {
@@ -233,17 +236,17 @@ img {
     border-radius: 20px;
     p {
         font-family: 'system-ui';
-        font-size: 20px;
+        font-size: 15px;
     }
     a {
         font-family: 'system-ui';
         color: white;
         text-decoration: none;
-        font-size: 20px;
+        font-size: 15px;
     }
     .date {
         font-style: italic;
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 
