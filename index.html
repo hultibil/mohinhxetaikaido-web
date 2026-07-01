@@ -4,6 +4,7 @@
     <title>Giới thiệu về Kaido</title>
     <link rel="icon" href="kaidoLogomini.png">
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -30,7 +31,7 @@
 
     <div class="sukien">
         <p>Khu vực sự kiện</p>
-        <p>Sắp có sự kiện mới sau khoảng 1 tháng nữa</p>
+        <p>Trang có font mới, web dễ dùng.</p>
         <p></p>
     </div>
     <div class="game">
@@ -67,20 +68,16 @@
 </div>
 </div>
 
+<!--Khu anh co che do chuyen anh tu dong-->
 <div id="xetaidoidau">
 <div class="thoisokhai">
     <h3 class="text">3. Xe tải đời đầu (Phiên bản v1)</h3>
-        <img class="img" src="khungxe.jpg">
-        <img class="img" src="khungxe2.jpg">
-        <img class="img" src="khungxe3.jpg">
-        <img class="img" src="khungxe4.jpg">
-        <img class="img" src="khungxe5.jpg">
-        <img class="img" src="khungxe6.jpg">
-        <img class="img" src="khungxe7.jpg">
-        <img class="img" src="khungxe8.jpg">
-        <img class="img" src="khungxe9.jpg">
-        <img src="matxe10.jpg" width="600">
-        <img src="matxe11.jpg" width="600">
+    <div class="slider">
+        <!--Them nut-->
+        <button class="prev" onclick="prevImage()">&#10094;</button>
+        <img id="slide" src="khungxe.jpg">
+        <button class="next" onclick="nextImage()">&#10095;</button>
+    </div>
         <p>Đây là bản thiết kế xe tải chở hàng cơ bản đầu tiên của CLB. Có thể điều khiển tiến lùi trái phải.Nó là nền móng để phát triển thiết kế các mẫu xe sau này.</p>
     </div>
 </div>
@@ -130,13 +127,15 @@
 </div>
 </div>
 
+<!--Khu anh co che do chuyen anh tu dong-->
 <div class="hino">
     <h3 class="text">Hình ảnh hiện tại</h3>
-    <img src="hino5001.jpg" width="300">
-    <img src="hino5002.jpg" width="300">
-    <img src="hino5003.jpg" width="300">
-    <img src="hino5004.jpg" width="300">
-    <img src="hino5005.jpg" width="300">
+    <div class="slider">
+        <!--Them nut-->
+        <button class="prev" onclick="prevImage2()">&#10094;</button>
+        <img id="slide2" src="hino5001.jpg">
+        <button class="next" onclick="nextImage2()">&#10095;</button>
+    </div>
 </div>
 
 <div class="quatrinhhientai">
@@ -179,11 +178,12 @@ function capNhatGio() {
 }
 setInterval(capNhatGio, 1000);
 </script>
-    <p class="date">Cập nhật trang web lần cuối: 27/05/2026</p>
+    <p class="date">Cập nhật trang web lần cuối: 01/07/2026</p>
 </div>
 
     <div class="quaylai">
         <a href="#dautrang">Bấm vào đây để quay lại đầu trang</a>
     </div>
 </body>
+    <script src="slide.js"></script>
 </html>
