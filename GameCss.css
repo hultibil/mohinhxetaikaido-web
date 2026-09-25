@@ -1,0 +1,195 @@
+/* Nhúng font riêng - HarmonyOS Sans (đầy đủ 6 độ đậm x thường/nghiêng) */
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Thin_Italic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Light_Italic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Regular_Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Medium_Italic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Bold_Italic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('fonts/HarmonyOS_Sans_Black_Italic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+body {
+    background: #111827;
+    font-family: 'HarmonyOS Sans', sans-serif;
+}
+
+.tittle {
+    text-align: center;
+    color: silver;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'system-ui';
+    margin-top:20px;
+    border-radius: 10px;
+
+    text-shadow:
+        -2px -2px 0 black,
+         2px -2px 0 black,
+        -2px  2px 0 black,
+         2px  2px 0 black;
+}
+
+.back {
+    text-align: center;
+    margin-top: 20px;
+    a {
+        font-family: 'system-ui';
+        font-size: 30px;
+        color: white;
+        text-decoration: none;
+        background: linear-gradient(to right, #ff416c, #ff4b2b);
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+}
+
+.back {
+    text-align: center;
+    margin-top: 20px;
+    a {
+        font-family: 'HarmonyOS Sans';
+        font-size: 25px;
+        color: white;
+        text-decoration: none;
+        background: linear-gradient(to right, #ff416c, #ff4b2b);
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+}
+
+.back {
+    animation: moDan 1s infinite;
+
+}
+@keyframes moDan {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*Loading cho gamemini*/
+
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.8s ease;
+}
+#loading img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    animation: logoLoading 1.0s ease-in-out infinite;
+}
+#loading p {
+    color: white;
+    font-size: 20px;
+    margin-top: 15px;
+}
+@keyframes logoLoading {
+    0% {
+        transform: scale(1.0);
+        opacity: 0.7;
+    }
+ 
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+ 
+    100% {
+        transform: scale(1.0);
+        opacity: 0.7;
+    }
+}
