@@ -1,89 +1,31 @@
-/* Nhúng font riêng - HarmonyOS Sans (đầy đủ 6 độ đậm x thường/nghiêng) */
-@font-face {
-    font-family: 'HarmonyOS Sans';
-    src: url('fonts/HarmonyOS_Sans_Thin.ttf') format('truetype');
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'HarmonyOS Sans';
-    src: url('fonts/HarmonyOS_Sans_Thin_Italic.ttf') format('truetype');
-    font-weight: 100;
-    font-style: italic;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'HarmonyOS Sans';
-    src: url('fonts/HarmonyOS_Sans_Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'HarmonyOS Sans';
-    src: url('fonts/HarmonyOS_Sans_Light_Italic.ttf') format('truetype');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'HarmonyOS Sans';
-    src: url('fonts/HarmonyOS_Sans_Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'HarmonyOS Sans';
-    src: url('fonts/HarmonyOS_Sans_Regular_Italic.ttf') format('truetype');
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'HarmonyOS Sans';
-    src: url('fonts/HarmonyOS_Sans_Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'HarmonyOS Sans';
-    src: url('fonts/HarmonyOS_Sans_Medium_Italic.ttf') format('truetype');
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'HarmonyOS Sans';
-    src: url('fonts/HarmonyOS_Sans_Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'HarmonyOS Sans';
-    src: url('fonts/HarmonyOS_Sans_Bold_Italic.ttf') format('truetype');
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'HarmonyOS Sans';
-    src: url('fonts/HarmonyOS_Sans_Black.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'HarmonyOS Sans';
-    src: url('fonts/HarmonyOS_Sans_Black_Italic.ttf') format('truetype');
-    font-weight: 900;
-    font-style: italic;
-    font-display: swap;
-}
+/* ============================================================
+   STYLE.CSS - dùng cho: index.html, hoithem.html, khac.html, tienich.html
+   Mục lục (Ctrl+F để nhảy nhanh tới từng phần):
+     1. FONT
+     2. BASE / RESET
+     3. LOADING SCREEN
+     4. HEADER & MENU
+     5. LOGO
+     6. TIÊU ĐỀ LỚN (banner .silver)
+     7. KHU VỰC SỰ KIỆN (.sukien)
+     8. MỤC LỤC NHANH (.gioithieu)
+     9. TIÊU ĐỀ SECTION (.chuyen, .text)
+    10. THẺ GIỚI THIỆU XE (.xe, .thoisokhai, .thoimoi, .hiendai, .hientai, .hino, .xediahinh, .xetaiv5, .xetaiv6)
+    11. ẢNH MẶC ĐỊNH
+    12. SLIDER ẢNH
+    13. MỤC QUẢNG CÁO (.ads)
+    14. FOOTER
+    15. NÚT QUAY LẠI ĐẦU TRANG (.quaylai)
+    16. CHATBOX
+    17. RESPONSIVE / MOBILE (tất cả @media gộp về đây, không rải rác)
+   ============================================================ */
 
+
+/* ==================== 1. FONT ==================== */
+@import url('fonts.css');
+
+
+/* ==================== 2. BASE / RESET ==================== */
 html {
     scroll-behavior: smooth;
 }
@@ -91,31 +33,12 @@ html {
 body {
     padding: 130px;
     background: #111827;
-    color:white;
+    color: white;
     font-family: 'HarmonyOS Sans', sans-serif;
 }
- 
-/* CSS cho tiêu đề */
-.header {
-    position: fixed; /* Đặt vị trí cố định để header luôn hiển thị trên cùng */
-    z-index: 1000; /* Đảm bảo header nằm trên các phần tử khác */
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    padding: 10px;
-    border-radius: 15px;
-    display: flex; /* Sử dụng flexbox để căn giữa các phần tử con */
-    justify-content: left; /* Căn giữa theo chiều ngang */
-    align-items: center; 
-    gap: 10px;
-    h2 {
-        color: black;
-        font-size: 20px;
-    }
-    background: linear-gradient(to right, rgb(111, 111, 111), rgb(167, 167, 167));
-}
- 
-/*CSS cho loading*/
+
+
+/* ==================== 3. LOADING SCREEN ==================== */
 #loading {
     position: fixed;
     top: 0;
@@ -143,250 +66,255 @@ body {
     margin-top: 15px;
 }
 @keyframes logoLoading {
-    0% {
-        transform: scale(1.0);
-        opacity: 0.7;
-    }
- 
-    50% {
-        transform: scale(1.1);
-        opacity: 1;
-    }
- 
-    100% {
-        transform: scale(1.0);
-        opacity: 0.7;
-    }
+    0%   { transform: scale(1.0); opacity: 0.7; }
+    50%  { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1.0); opacity: 0.7; }
 }
-/* CSS cho hang nut tren dau */
-.nut0chon {
-    margin-left: auto;
+
+
+/* ==================== 4. HEADER & MENU ==================== */
+.header {
+    position: fixed; /* Đặt vị trí cố định để header luôn hiển thị trên cùng */
+    z-index: 1000;   /* Đảm bảo header nằm trên các phần tử khác */
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 15px;
     display: flex;
-    a {
-        color: white;
-        text-decoration: none;
-        font-size: 10px;
-        background: linear-gradient(to right, #000000, #808080);
-        padding: 10px 20px;
-        border-radius: 10px;
-    }
-    transition: all 0.3s ease;
-    &:hover a {
-        background: linear-gradient(to right, #ff416c, #ff4b2b);
-        transform: translateY(-2px);
-    }
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(to right, rgb(111, 111, 111), rgb(167, 167, 167));
 }
+.header h2 {
+    color: black;
+    font-size: 20px;
+}
+
+/* --- Nút "Trang chủ" (nut0) --- */
 .nut0 {
     margin-left: auto;
     display: flex;
-    a {
-        color: white;
-        text-decoration: none;
-        font-size: 10px;
-        background: linear-gradient(to right, #ff416c, #ff4b2b);
-        padding: 10px 20px;
-        border-radius: 10px;
-    }
-
     transition: all 0.3s ease;
-    &:hover a {
-        background: linear-gradient(to right, #000000, #808080);
-        transform: translateY(-2px);
-        }
 }
+.nut0 a {
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.nut0:hover a {
+    background: linear-gradient(to right, #000000, #808080);
+    transform: translateY(-2px);
+}
+
+/* --- nut0 khi đang là trang hiện tại --- */
+.nut0chon {
+    margin-left: auto;
+    display: flex;
+    transition: all 0.3s ease;
+}
+.nut0chon a {
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    background: linear-gradient(to right, #000000, #808080);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.nut0chon:hover a {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    transform: translateY(-2px);
+}
+
+/* --- Nút "Dự án khác" (nut1) --- */
 .nut1 {
     display: flex;
-    a {
-        color: white;
-        text-decoration: none;
-        font-size: 10px;
-        background: linear-gradient(to right, #ff416c, #ff4b2b);
-        padding: 10px 20px;
-        border-radius: 10px;
-    }
-
     transition: all 0.3s ease;
-    &:hover a {
-        background: linear-gradient(to right, #000000, #808080);
-        transform: translateY(-2px);
-    }
 }
-/*Nút 1 đã chọn*/
+.nut1 a {
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.nut1:hover a {
+    background: linear-gradient(to right, #000000, #808080);
+    transform: translateY(-2px);
+}
+
+/* --- nut1 khi đang là trang hiện tại --- */
 .nut1chon {
     display: flex;
-    a {
-        color: white;
-        text-decoration: none;
-        font-size: 10px;
-        background: linear-gradient(to right, #000000, #808080);
-        padding: 10px 20px;
-        border-radius: 10px;
-    }
-
     transition: all 0.3s ease;
-    &:hover a {
-        background: linear-gradient(to right, #ff416c, #ff4b2b);
-        transform: translateY(-2px);
-    }
 }
+.nut1chon a {
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    background: linear-gradient(to right, #000000, #808080);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.nut1chon:hover a {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    transform: translateY(-2px);
+}
+
+/* --- Nút "Trò chuyện" / "Game mini" / "Tính năng" (nut2, nut3, nut4) --- */
 .nut2, .nut3, .nut4 {
     display: flex;
-    a {
-        color: white;
-        text-decoration: none;
-        font-size: 10px;
-        background: linear-gradient(to right, #ff416c, #ff4b2b);
-        padding: 10px 20px;
-        border-radius: 10px;
-    }
-
     transition: all 0.3s ease;
-    &:hover a {
-        background: linear-gradient(to right, #000000, #808080);
-        transform: translateY(-2px);
-    }
 }
+.nut2 a, .nut3 a, .nut4 a {
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.nut2:hover a, .nut3:hover a, .nut4:hover a {
+    background: linear-gradient(to right, #000000, #808080);
+    transform: translateY(-2px);
+}
+
+/* --- nut2 khi đang là trang hiện tại --- */
 .nut2chon {
     display: flex;
-    a {
-        color: white;
-        text-decoration: none;
-        font-size: 10px;
-        background: linear-gradient(to right, #000000, #808080);
-        padding: 10px 20px;
-        border-radius: 10px;
-    }
     transition: all 0.3s ease;
-    &:hover a {
-        background: linear-gradient(to right, #ff416c, #ff4b2b);
-        transform: translateY(-2px);
-    }
+}
+.nut2chon a {
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    background: linear-gradient(to right, #000000, #808080);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.nut2chon:hover a {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    transform: translateY(-2px);
 }
 
+/* --- nut4 khi đang là trang hiện tại --- */
 .nut4chon {
     display: flex;
-    a {
-        color: white;
-        text-decoration: none;
-        font-size: 10px;
-        background: linear-gradient(to right, #000000, #808080);
-        padding: 10px 20px;
-        border-radius: 10px;
-    }
-
     transition: all 0.3s ease;
-    &:hover a {
-        background: linear-gradient(to right, #ff416c, #ff4b2b);
-        transform: translateY(-2px);
-    }}
- 
- 
+}
+.nut4chon a {
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    background: linear-gradient(to right, #000000, #808080);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.nut4chon:hover a {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    transform: translateY(-2px);
+}
+
+
+/* ==================== 5. LOGO ==================== */
 .logo {
     text-align: center;
-    width:100px;
-    height:60px;
+    width: 100px;
+    height: 60px;
 }
+
+
+/* ==================== 6. TIÊU ĐỀ LỚN (banner .silver) ==================== */
 .silver {
-    background: linear-gradient(
-        90deg,
-        silver,
-        white,
-        black,
-        silver
-    );
+    background: linear-gradient(90deg, silver, white, black, silver);
     background-size: 400% 400%;
     animation: RGB 10s linear infinite;
     color: silver;
     font-size: 40px;
     font-weight: bold;
-    margin-top:20px;
+    margin-top: 20px;
     padding: 30px;
     border-radius: 10px;
-/* CSS cho tiêu đề */
     text-shadow:
         -2px -2px 0 black,
          2px -2px 0 black,
         -2px  2px 0 black,
          2px  2px 0 black;
 }
-/*Dải màu RGB chuyển động tiêu đề*/
+/* Dải màu RGB chuyển động, dùng chung cho .silver và .chuyen */
 @keyframes RGB {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
-/*Khu vuc thong bao su kien*/
+
+
+/* ==================== 7. KHU VỰC SỰ KIỆN (.sukien) ==================== */
 .sukien {
     text-align: center;
     background: linear-gradient(to right, #00c6ff, #0072ff);
     border-radius: 10px;
     border: 4px solid black;
+    animation: moDan 5s infinite;
 }
 .sukien p {
- 
     font-size: 20px;
     color: white;
     border-radius: 10px;
 }
-.sukien {
-    animation: moDan 5s infinite;
-}
-@keyframes moDan {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.8;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-.sukien a{
+.sukien a {
     font-size: 20px;
     color: rgba(217, 255, 0);
     text-decoration: none;
-    &:hover {
-        background: Linear-gradient(to right, #ff416c, #ff4b2b);
-    }
 }
-/*Nút sự kiện cho các trang con khác*/
+.sukien a:hover {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+}
+@keyframes moDan {
+    0%   { opacity: 1; }
+    50%  { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+/* Nút sự kiện chuyển hướng cho các trang con khác */
 .chuyentiep {
     text-align: center;
     margin-top: 20px;
-    a {
-        font-family: 'system-ui';
-        font-size: 20px;
-        color: white;
-        text-decoration: none;
-        background: linear-gradient(to right, #ff416c, #ff4b2b);
-        padding: 10px 20px;
-        border-radius: 10px;
-        display: inline-block;
-    }
-    &:hover a {
-        background: linear-gradient(to right, #000000, #808080);
-    }
 }
-/*Khu vuc ket thuc su kien*/
+.chuyentiep a {
+    font-family: 'system-ui';
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+.chuyentiep a:hover {
+    background: linear-gradient(to right, #000000, #808080);
+}
+
+
+/* ==================== 8. MỤC LỤC NHANH (.gioithieu) ==================== */
 .gioithieu {
     text-align: left;
-    background-image: 
-    linear-gradient(to right, rgba(0,0,0,0.9),rgba(0,0,0,0.0)),
-    url('image/anhmucluc.jpg');
+    background-image:
+        linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.0)),
+        url('image/anhmucluc.jpg');
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 10px;
-    p {
+}
+.gioithieu p {
     font-size: 24px;
-    }
-    a {
+}
+.gioithieu a {
     background: rgba(0, 0, 0, 0.5);
     padding: 10px 20px;
     margin-left: 5px;
@@ -398,24 +326,16 @@ body {
     border-radius: 10px;
     text-decoration: none;
     transition: all 0.3s ease;
-    &:hover {
-        background: linear-gradient(to right, #000000, #808080);
-        transform: translateY(-2px); /*Nhích nhẹ lên*/
-    }
-}}
- 
+}
+.gioithieu a:hover {
+    background: linear-gradient(to right, #000000, #808080);
+    transform: translateY(-2px); /* Nhích nhẹ lên */
+}
+
+
+/* ==================== 9. TIÊU ĐỀ SECTION ==================== */
 .chuyen {
-    background: linear-gradient(
-        90deg,
-        red,
-        orange,
-        yellow,
-        green,
-        cyan,
-        blue,
-        violet,
-        red
-    );
+    background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet, red);
     background-size: 400% 400%;
     animation: RGB 10s linear infinite;
     border-radius: 10px;
@@ -424,24 +344,13 @@ body {
     font-size: 20px;
     color: white;
 }
-/*Dải màu RGB chuyển động*/
-@keyframes RGB {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
+
 .text {
     text-align: center;
     color: silver;
     font-size: 25px;
     font-weight: bold;
-    margin-top:20px;
+    margin-top: 20px;
     border-radius: 10px;
     text-shadow:
         -2px -2px 0 black,
@@ -449,254 +358,252 @@ body {
         -2px  2px 0 black,
          2px  2px 0 black;
 }
- 
+
+
+/* ==================== 10. THẺ GIỚI THIỆU XE ==================== */
 .xe {
     background: rgba(0,0,0,0.2);
     border-radius: 40px;
     display: block;
     text-align: center;
-    p {
- 
-        font-size: 20px;
-    }
 }
- 
+.xe p {
+    font-size: 20px;
+}
+
 .video1 {
     text-align: center;
     border-radius: 30px;
 }
- 
-img {
-    border-radius: 10px;
-    width: 500px;
-}
- 
+
 .thoisokhai {
     text-align: center;
     background: rgba(255, 218, 7, 0.2);
     border-radius: 30px;
-    p {
- 
-        font-size: 20px;
-    }
 }
- 
-/*CSS cho phan chuyen anh*/
-.slider{
-    width: 400px;
-    margin: auto; 
-    overflow: hidden; /* Ẩn các phần tử vượt ra ngoài khung */
-    position: relative; /* Đặt vị trí tương đối để chứa các nút điều hướng */
+.thoisokhai p {
+    font-size: 20px;
 }
-.slider img{
-    width: 100%; /* Đặt chiều rộng hình ảnh bằng với chiều rộng của khung slider */
-    border-radius: 15px;
-     /* QUAN TRỌNG: hiệu ứng mờ */
-    opacity: 1;
-    transition: opacity 0.8s ease;
-}
- 
-/*Khu vuc nút*/
-.prev, .next {
-    position: absolute; /*Vị trí tuyệt đối để đặt nút trên hình ảnh*/
-    top: 50%;              /*Vị trí nút ở giữa theo chiều dọc*/
-    transform: translateY(-50%); /*Dịch chuyển nút lên 50% chiều cao của hình ảnh để căn giữa*/
-    z-index: 10; /*Đảm bảo nút nằm trên hình ảnh*/ /*-----Quan trong-----*/
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 15px; /*Khoảng cách bên trong nút*/
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-.prev {
-    left: 10px; /*Nut trái cách 10px từ cạnh trái */
-}
-.next {
-    right: 10px; /*Nut phải cách 10px từ cạnh phải */
-}
- 
+
 .thoimoi {
     text-align: center;
-    p {
- 
-        font-size: 20px;
-    }
     background: rgb(7, 201, 255, 0.2);
     border-radius: 20px;
 }
- 
+.thoimoi p {
+    font-size: 20px;
+}
+
 .hiendai {
     background: rgba(82, 255, 3, 0.2);
     text-align: center;
     border-radius: 20px;
-    p {
-  
-        font-size: 20px;
-    }
 }
- 
+.hiendai p {
+    font-size: 20px;
+}
+
 .hientai {
     text-align: center;
     background: rgba(0, 140, 255, 0.2);
     border-radius: 20px;
-    p {
-        font-size: 20px;
-    }
 }
- 
+.hientai p {
+    font-size: 20px;
+}
+
 .hino {
     text-align: center;
     background: rgba(217, 0, 255, 0.2);
     border-radius: 20px;
 }
- 
-/*Mục quãng cáo*/
+
+.xediahinh {
+    background: rgba(3, 196, 245, 0.2);
+    text-align: center;
+    border-radius: 20px;
+}
+.xediahinh p {
+    font-size: 20px;
+}
+
+.xetaiv5 {
+    text-align: center;
+    background: rgba(217, 255, 0, 0.208);
+    border-radius: 20px;
+}
+.xetaiv5 p {
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+.xetaiv6 {
+    text-align: center;
+    background: rgba(5, 150, 138, 0.2);
+    border-radius: 20px;
+}
+.xetaiv6 p {
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+
+/* ==================== 11. ẢNH MẶC ĐỊNH ==================== */
+img {
+    border-radius: 10px;
+    width: 500px;
+}
+
+
+/* ==================== 12. SLIDER ẢNH ==================== */
+.slider {
+    width: 400px;
+    margin: auto;
+    overflow: hidden;   /* Ẩn các phần tử vượt ra ngoài khung */
+    position: relative; /* Đặt vị trí tương đối để chứa các nút điều hướng */
+}
+.slider img {
+    width: 100%; /* Đặt chiều rộng hình ảnh bằng với chiều rộng của khung slider */
+    border-radius: 15px;
+    opacity: 1;
+    transition: opacity 0.8s ease; /* QUAN TRỌNG: hiệu ứng mờ */
+}
+.slide-offline-notice {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.75);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+    z-index: 5;
+    max-width: 80%;
+}
+
+/* Khu vực nút điều hướng slider */
+.prev, .next {
+    position: absolute;          /* Vị trí tuyệt đối để đặt nút trên hình ảnh */
+    top: 50%;                    /* Vị trí nút ở giữa theo chiều dọc */
+    transform: translateY(-50%); /* Dịch chuyển nút lên 50% chiều cao của hình ảnh để căn giữa */
+    z-index: 10;                 /* Đảm bảo nút nằm trên hình ảnh */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.prev {
+    left: 10px; /* Nút trái cách 10px từ cạnh trái */
+}
+.next {
+    right: 10px; /* Nút phải cách 10px từ cạnh phải */
+}
+
+
+/* ==================== 13. MỤC QUẢNG CÁO (.ads) ==================== */
 .ads {
     display: flex;
     background: rgb(111, 111, 111);
     border-radius: 10px;
-
+}
 .anhquangcao {
     width: 210px;
     height: 150px;
 }
-}
 .bangquangcao {
-    flex:1;
+    flex: 1;
     background: linear-gradient(rgb(255,255,255), rgb(54, 167, 219));
     padding: 5px;
     margin: 5px;
     border-radius: 10px;
     padding-top: -10px;
-    .tieudeqc {
-        color:red;
-        font-size: 18px;
-        font-family: Arial, Helvetica, sans-serif;
-        margin-bottom: -10px;
-    }
-
- 
+}
+.bangquangcao .tieudeqc {
+    color: red;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: -10px;
+}
 .noidung2 {
-    margin-bottom:-10px;
-    display:flex;
+    margin-bottom: -10px;
+    display: flex;
     gap: 20px;
-    p {
-        color:black;
-        font-size: 15px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
 }
- 
+.noidung2 p {
+    color: black;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+
+/* ==================== 14. FOOTER ==================== */
 .thongtinweb {
     text-align: center;
     background: rgba(255, 0, 0, 0.2);
     border-radius: 20px;
-    p {
-        font-size: 15px;
-    }
-    a {
-        color: white;
-        text-decoration: none;
-        font-size: 15px;
-    }
-    .date {
-        font-style: italic;
-        font-size: 18px;
-    }
 }
- 
+.thongtinweb p {
+    font-size: 15px;
+}
+.thongtinweb a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+.thongtinweb .date {
+    font-style: italic;
+    font-size: 18px;
+}
+
 .footer {
     display: flex;
     justify-content: space-between;
     padding: 30px 50px;
     color: white;
 }
-/*hover cho nút tik tok*/
-.tiktok, .tiktok2, .tiktok3{
-    &:hover a {
-        background: linear-gradient(
-    90deg,
-    #25f4ee,
-    #000000,
-    #fe2c55
-);
-    }
+
+/* Hover cho nút Tik Tok */
+.tiktok:hover a, .tiktok2:hover a, .tiktok3:hover a {
+    background: linear-gradient(90deg, #25f4ee, #000000, #fe2c55);
 }
-/*hover cho nút youtube*/
-.youtube, .youtube2{
-    &:hover a {
-        background: red;
+/* Hover cho nút Youtube */
+.youtube:hover a, .youtube2:hover a {
+    background: red;
 }
-}
-/*Thu nhổ thì tự động thu lại thành dọc*/
-@media (max-width: 1000px) {
-    .footer, .ads {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
- 
-/*xe dia hinh*/
-.xediahinh {
-    background: rgba(3, 196, 245, 0.2);
-    text-align: center;
-    border-radius: 20px;
-    p {
-  
-        font-size: 20px;
-    }
-}
- 
-.xetaiv5 {
-    text-align: center;
-    background: rgba(217, 255, 0, 0.208);
-    border-radius: 20px;
-    p {
- 
-        font-size: 20px;
-        color: white;
-        border-radius: 10px;
-    }
-}
- 
-.xetaiv6 {
-    text-align: center;
-    background: rgba(5, 150, 138, 0.2);
-    border-radius: 20px;
-    p {
- 
-        font-size: 20px;
-        color: white;
-        border-radius: 10px;
-    }
-}
- 
+
+
+/* ==================== 15. NÚT QUAY LẠI ĐẦU TRANG ==================== */
 .quaylai {
     position: fixed;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
- 
     text-align: center;
     background: rgba(255, 0, 0, 1.0);
     border-radius: 20px;
     padding: 8px 30px;
-    z-index:999;
-    a {
-        color: pink;
-        text-decoration: none;
-        font-size: 20px;
-    }
-    &:hover{
-        background: linear-gradient(to right, #000000, #808080);
-    }
+    z-index: 999;
 }
- 
-/*CSS cho bot*/
-/*Viền ngoài cho chatbox*/
+.quaylai a {
+    color: pink;
+    text-decoration: none;
+    font-size: 20px;
+}
+.quaylai:hover {
+    background: linear-gradient(to right, #000000, #808080);
+}
+
+
+/* ==================== 16. CHATBOX ==================== */
+/* Viền ngoài cho chatbox */
 .chatbox {
     width: auto;
     max-width: 100%;
@@ -706,7 +613,7 @@ img {
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.5); /* Tạo hiệu ứng đổ bóng */
 }
-/*Bên trong khung chatbox*/
+/* Bên trong khung chatbox */
 .chat {
     height: 500px;
     padding: 10px;
@@ -714,7 +621,7 @@ img {
     background: rgb(167, 167, 167);
     border-radius: 10px;
 }
- 
+
 .ai-message {
     max-width: 80%;
     margin-bottom: 15px;
@@ -722,11 +629,10 @@ img {
     background: linear-gradient(to right, #000000, #4d4c4c);
     border-radius: 12px;
 }
- 
 .ai-message p {
     margin: 5px 0 0 0;
 }
- 
+
 .user-message {
     max-width: 80%;
     margin: 10px 0 10px auto;
@@ -736,13 +642,12 @@ img {
     border-radius: 12px;
     text-align: right;
 }
- 
+
 .chat-input {
     display: flex;
     gap: 10px;
     margin-top: 15px;
 }
- 
 .chat-input input {
     flex: 1;
     padding: 12px;
@@ -750,8 +655,7 @@ img {
     border-radius: 8px;
     font-size: 16px;
 }
- 
-/*Nút gửi*/
+/* Nút gửi */
 .chat-input button {
     padding: 12px 20px;
     border: none;
@@ -760,11 +664,10 @@ img {
     color: white;
     cursor: pointer;
 }
- 
 .chat-input button:hover {
     background: linear-gradient(to right, #000000, #808080);
 }
- 
+
 .more-btn {
     margin-top: 15px;
     padding: 10px 15px;
@@ -773,18 +676,17 @@ img {
     background: #555;
     color: white;
     cursor: pointer;
-    &:hover{
-        background: linear-gradient(to right, #000000, #808080);
-    }
 }
- 
+.more-btn:hover {
+    background: linear-gradient(to right, #000000, #808080);
+}
+
 .questions {
     display: none;
     margin-top: 10px;
     gap: 8px;
     flex-wrap: wrap;
 }
- 
 .questions button {
     padding: 8px 12px;
     border: none;
@@ -792,11 +694,10 @@ img {
     background: #ddd;
     cursor: pointer;
 }
- 
 .questions button:hover {
     background: #bbb;
 }
- 
+
 .clear-btn {
     margin-top: 15px;
     padding: 8px 12px;
@@ -805,19 +706,32 @@ img {
     background: red;
     color: white;
     cursor: pointer;
-    &:hover{
-        background: linear-gradient(to right, #000000, #808080);
+}
+.clear-btn:hover {
+    background: linear-gradient(to right, #000000, #808080);
+}
+
+
+/* ==================== 17. RESPONSIVE / MOBILE ====================
+   Tất cả @media gộp về 1 chỗ duy nhất ở cuối file, xếp từ màn hình
+   rộng thu hẹp dần xuống (1000px -> 768px -> 480px), để không phải
+   lục tung cả file mỗi khi cần chỉnh responsive.
+   ================================================================ */
+
+/* Thu nhỏ dưới 1000px thì .footer và .ads tự xuống hàng dọc */
+@media (max-width: 1000px) {
+    .footer, .ads {
+        flex-direction: column;
+        gap: 20px;
     }
 }
-/* ============================================================
-   RESPONSIVE - TỐI ƯU CHO MOBILE (thêm mới, không sửa CSS gốc)
-   ============================================================ */
+
 @media (max-width: 768px) {
- 
+
     body {
         padding: 15px;
     }
- 
+
     /* Bỏ "fixed" trên mobile để header không đè lên nội dung
        dù nó xuống mấy dòng cũng không sao, không cần padding-top đoán mò */
     .header {
@@ -829,126 +743,125 @@ img {
         justify-content: center;
         margin-bottom: 15px;
     }
- 
+
     .header h2 {
         width: 100%;
         text-align: center;
         font-size: 16px;
         margin: 4px 0;
     }
- 
+
     .logo {
         width: 70px;
         height: 45px;
     }
- 
+
     .nut0, .nut0chon, .nut1, .nut1chon, .nut2, .nut2chon, .nut3, .nut4, .nut4chon {
         margin-left: 0;
     }
- 
+
     .nut0 a, .nut0chon a, .nut1 a, .nut1chon a,
-    .nut2 a, .nut2chon a, .nut3 a, .nut4 a .nut4chon a{
+    .nut2 a, .nut2chon a, .nut3 a, .nut4 a, .nut4chon a {
         font-size: 12px;
         padding: 8px 12px;
     }
- 
+
     .silver {
         font-size: 24px;
         padding: 15px;
     }
- 
+
     .gioithieu p {
         font-size: 18px;
     }
- 
     .gioithieu a {
         font-size: 15px;
         display: block;
         margin: 5px 0;
     }
- 
+
     .sukien p, .sukien a {
         font-size: 16px;
     }
- 
+
     .chuyentiep a {
         font-size: 16px;
     }
- 
+
     .chuyen {
         font-size: 16px;
     }
- 
+
     .text {
         font-size: 20px;
     }
- 
+
     /* Ảnh và video: bỏ kích thước cố định, co giãn theo màn hình
-       (trừ logo trong header, giữ nguyên kích thước riêng) */
-    img:not(.logo):not(.anhquangcao){
+       (trừ logo trong header và ảnh quảng cáo, giữ nguyên kích thước riêng) */
+    img:not(.logo):not(.anhquangcao) {
         width: 100% !important;
         max-width: 100%;
         height: auto;
     }
- 
+
     video {
         width: 100% !important;
         max-width: 100%;
         height: auto !important;
     }
- 
+
     .slider {
         width: 100%;
         max-width: 350px;
     }
- 
+
     .ai-message, .user-message {
         max-width: 90%;
     }
- 
+
     .chat {
         height: 400px;
     }
- 
+
     .noidung2 {
         flex-direction: column;
         gap: 15px;
     }
- 
+
     .bangquangcao .tieudeqc {
         font-size: 22px;
     }
- 
+
     .footer {
         padding: 20px 15px;
         text-align: center;
     }
- 
+
     .quaylai a {
         font-size: 16px;
     }
 }
- 
+
 @media (max-width: 480px) {
- 
+
     .header h2 {
         font-size: 13px;
     }
- 
+
     .nut0 a, .nut0chon a, .nut1 a, .nut1chon a,
     .nut2 a, .nut2chon a, .nut3 a, .nut4 a, .nut4chon a {
         font-size: 11px;
         padding: 6px 10px;
     }
- 
+
     .silver {
         font-size: 19px;
     }
- 
+
     .chat {
         height: 320px;
     }
- 
+
     .chat-input input {
         font-size: 14px;
     }
